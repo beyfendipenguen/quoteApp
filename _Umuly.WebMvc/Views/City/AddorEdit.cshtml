@@ -1,0 +1,33 @@
+﻿@model City
+
+@{
+    ViewData["Title"] = "CityView";
+
+}
+<div class="form-body">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CityName)
+            @Html.EditorFor(model => model.CityName)
+            @Html.ValidationMessageFor(model => model.CityName)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Country.CountryName)
+            @Html.DropDownList("country",
+                   (IEnumerable<SelectListItem>)ViewBag.country,
+                   "Select country")
+            
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn-success" />
+            <input type="reset" value="Reset" class="btn-default" />
+        </div>
+
+
+    }
+
+</div>
+

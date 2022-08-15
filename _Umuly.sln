@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_Umuly.WebApi", "_Umuly.WebApi\_Umuly.WebApi.csproj", "{D4ADFF34-3F11-4AA8-BB07-7A04BD72291C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Umuly.WebMvc", "_Umuly.WebMvc\_Umuly.WebMvc.csproj", "{9419B444-62E3-4DB8-A9D1-381AE10EB722}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4ADFF34-3F11-4AA8-BB07-7A04BD72291C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4ADFF34-3F11-4AA8-BB07-7A04BD72291C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4ADFF34-3F11-4AA8-BB07-7A04BD72291C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4ADFF34-3F11-4AA8-BB07-7A04BD72291C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9419B444-62E3-4DB8-A9D1-381AE10EB722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9419B444-62E3-4DB8-A9D1-381AE10EB722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9419B444-62E3-4DB8-A9D1-381AE10EB722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9419B444-62E3-4DB8-A9D1-381AE10EB722}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A13E3D5F-CC44-4F15-AC4B-D817FF9B1A74}
+	EndGlobalSection
+EndGlobal

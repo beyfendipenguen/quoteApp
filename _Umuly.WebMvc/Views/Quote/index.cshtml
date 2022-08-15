@@ -1,0 +1,125 @@
+﻿@model IEnumerable<_Umuly.WebMvc.Models.Quote>
+
+@{
+    ViewData["Title"] = "quote";
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                From city
+            </th>
+            <th>
+                To city
+            </th>
+            <th>
+                Currency
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeightType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LengthType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Length)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovementType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Incoterm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PackageType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuoteNote)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromCityId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToCityId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrencyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeightType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LengthType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Length)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovementType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Incoterm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackageType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuoteNote)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

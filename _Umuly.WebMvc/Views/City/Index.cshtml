@@ -1,0 +1,66 @@
+﻿@model IEnumerable<_Umuly.WebMvc.Models.CityDto>
+
+@{
+    ViewData["Title"] = "CityView";
+}
+
+<h1>CountryView</h1>
+
+<p>
+    <a href="@Url.Action("AddorEdit","City")" class="btn btn-default"><i class="fa fa-plus"> Create New</i></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country.CountryName)
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country.CountryName)
+            </td>
+            <td>
+                <a href="@Url.Action("AddorEdit","City", new { id = item.Id })" class="btn btn-default"><i class="fa fa-pencil"></i>Edit</a>
+
+                <a onclick="Delete(@item.Id)" class="btn btn-default"><i class="fa fa-trash"></i>Delete</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section scripts{
+    <script>
+        $(function () {
+            var successsMessage = '@TempData["SuccessMessage"]'
+            if (successsMessage != '')
+                alertify.success(successsMessage);
+        });
+        function Delete(id) {
+            alertify.confirm('Web Api CRUD Operations','Are You Sure to Delete this Record ?',function(){
+                window.location.href  = '@Url.Action("Delete","City")/'+id;
+            },null );
+        }
+        
+    </script>
+
+}

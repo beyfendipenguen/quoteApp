@@ -1,0 +1,27 @@
+﻿@model Country
+
+@{
+    ViewData["Title"] = "CountryView";
+
+}
+<div class="form-body">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CountryName)
+            @Html.EditorFor(model => model.CountryName)
+            @Html.ValidationMessageFor(model => model.CountryName)
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn-success" />
+            <input type="reset" value="Reset" class="btn-default" />
+        </div>
+
+
+    }
+
+</div>
+
